@@ -20,7 +20,7 @@ from homeassistant.components.vacuum import (
     SERVICE_RETURN_TO_BASE,
     SERVICE_START,
     SERVICE_STOP,
-    STATE_CLEANING,
+    VacuumActivity,
     VacuumEntityFeature,
 )
 from homeassistant.const import (
@@ -120,7 +120,7 @@ class Camera(Switch):
     def _msg_generator(
         self,
     ) -> Callable[[str, ReadOnlyDict[Mapping[str, Any]]], str | int]:
-        return lambda state, attributes: MSG_OFF if state == STATE_IDLE else MSG_ON
+        return lambda state, attributes: MSG_OFF if state == CameraState.IDLE else MSG_ON
 
 
 @SYNC_TYPES.register("media_player")
@@ -148,7 +148,7 @@ class Lock(Switch):
     def _msg_generator(
         self,
     ) -> Callable[[str, ReadOnlyDict[Mapping[str, Any]]], str | int]:
-        return lambda state, attributes: MSG_OFF if state == STATE_LOCKED else MSG_ON
+        return lambda state, attributes: MSG_OFF if state == LockState.LOCKED else MSG_ON
 
     def _service_names(self) -> tuple[str, str]:
         return (SERVICE_UNLOCK, SERVICE_LOCK)
@@ -193,7 +193,7 @@ class Vacuum(Switch):
     ) -> Callable[[str, ReadOnlyDict[Mapping[str, Any]]], str | int]:
         return (
             lambda state, attributes: MSG_ON
-            if state in [STATE_ON, STATE_CLEANING]
+            if state in [STATE_ON, VacuumActivity.CLEANING]
             else MSG_OFF
         )
 
