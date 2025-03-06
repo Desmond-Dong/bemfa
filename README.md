@@ -43,7 +43,4 @@
 
     A: 目前没有太好的方案，一个可行的方案是注册2个巴法云账号，分别配置不同的插件实体进行同步，然后将2个账号分别绑定到小爱同学和天猫精灵。
 
-## 捐赠
-如果此项目对你有帮助，可以扫描下方二维码请我喝杯咖啡 :)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="donate/wechat.png" width="200" title="使用微信扫一扫" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="donate/alipay.png" width="200" title="使用支付宝扫一扫" />
