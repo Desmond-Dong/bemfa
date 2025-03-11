@@ -2,7 +2,7 @@
   "domain": "bemfa",
   "name": "Bemfa",
   "codeowners": [
-    "@djhui"
+    "@Desmond-Dong"
   ],
   "config_flow": true,
   "dependencies": [],
