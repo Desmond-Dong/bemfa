@@ -29,7 +29,6 @@ from homeassistant.const import (
     SERVICE_TURN_ON,
     SERVICE_UNLOCK,
     SERVICE_LOCK,
-    STATE_LOCKED,
     STATE_ON,
     STATE_PLAYING,
 )
